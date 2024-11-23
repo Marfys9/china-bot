@@ -1,0 +1,294 @@
+2024-11-22 13:30:46,111 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 13:30:46,832 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 13:31:06,040 - aiogram.event - INFO - Update id=818164538 is handled. Duration 773 ms by bot id=7372094405
+2024-11-22 13:31:21,730 - aiogram.event - INFO - Update id=818164539 is handled. Duration 646 ms by bot id=7372094405
+2024-11-22 13:31:29,180 - aiogram.event - INFO - Update id=818164540 is not handled. Duration 1 ms by bot id=7372094405
+2024-11-22 13:55:43,410 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 13:55:44,097 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 13:56:16,062 - aiogram.event - INFO - Update id=818164541 is handled. Duration 1005 ms by bot id=7372094405
+2024-11-22 13:56:26,135 - aiogram.event - INFO - Update id=818164542 is handled. Duration 252 ms by bot id=7372094405
+2024-11-22 13:56:29,664 - aiogram.event - INFO - Update id=818164543 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:16:07,243 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-11-22 14:16:07,246 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7372094405)
+2024-11-22 14:16:18,901 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7372094405)
+2024-11-22 14:18:08,413 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 14:18:09,040 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 14:18:17,300 - aiogram.event - INFO - Update id=818164544 is handled. Duration 1043 ms by bot id=7372094405
+2024-11-22 14:18:21,926 - aiogram.event - INFO - Update id=818164545 is handled. Duration 264 ms by bot id=7372094405
+2024-11-22 14:18:36,795 - aiogram.event - INFO - Update id=818164546 is handled. Duration 236 ms by bot id=7372094405
+2024-11-22 14:18:43,522 - aiogram.event - INFO - Update id=818164547 is handled. Duration 229 ms by bot id=7372094405
+2024-11-22 14:18:47,557 - aiogram.event - INFO - Update id=818164548 is handled. Duration 249 ms by bot id=7372094405
+2024-11-22 14:18:50,737 - aiogram.event - INFO - Update id=818164549 is handled. Duration 356 ms by bot id=7372094405
+2024-11-22 14:18:54,013 - aiogram.event - INFO - Update id=818164550 is handled. Duration 254 ms by bot id=7372094405
+2024-11-22 14:18:57,348 - aiogram.event - INFO - Update id=818164551 is not handled. Duration 3 ms by bot id=7372094405
+2024-11-22 14:18:57,348 - aiogram.event - ERROR - Cause exception while process update id=818164551 by bot id=7372094405
+InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/marfys9/Downloads/China_Bot/delivery-calculation-bot.py", line 252, in process_length
+    length = Decimal(message.text)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+2024-11-22 14:19:26,644 - aiogram.event - INFO - Update id=818164552 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:19:26,646 - aiogram.event - ERROR - Cause exception while process update id=818164552 by bot id=7372094405
+InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/marfys9/Downloads/China_Bot/delivery-calculation-bot.py", line 252, in process_length
+    length = Decimal(message.text)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+2024-11-22 14:32:48,984 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-11-22 14:32:48,987 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7372094405)
+2024-11-22 14:33:50,163 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2024-11-22 14:33:50,164 - aiogram.dispatcher - WARNING - Sleep for 1.286620 seconds and try again... (tryings = 1, bot id = 7372094405)
+2024-11-22 14:34:51,645 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2024-11-22 14:34:51,646 - aiogram.dispatcher - WARNING - Sleep for 1.580813 seconds and try again... (tryings = 2, bot id = 7372094405)
+2024-11-22 14:36:07,006 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2024-11-22 14:36:07,009 - aiogram.dispatcher - WARNING - Sleep for 1.868102 seconds and try again... (tryings = 3, bot id = 7372094405)
+2024-11-22 14:38:20,820 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2024-11-22 14:38:20,822 - aiogram.dispatcher - WARNING - Sleep for 2.332347 seconds and try again... (tryings = 4, bot id = 7372094405)
+2024-11-22 14:44:02,241 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2024-11-22 14:44:02,245 - aiogram.dispatcher - WARNING - Sleep for 3.069724 seconds and try again... (tryings = 5, bot id = 7372094405)
+2024-11-22 14:47:28,826 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 14:48:28,995 - aiogram.dispatcher - INFO - Polling stopped
+2024-11-22 14:50:04,259 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 14:50:05,095 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 14:50:05,990 - aiogram.event - INFO - Update id=818164553 is handled. Duration 579 ms by bot id=7372094405
+2024-11-22 14:50:09,445 - aiogram.event - INFO - Update id=818164554 is handled. Duration 231 ms by bot id=7372094405
+2024-11-22 14:50:19,816 - aiogram.event - INFO - Update id=818164555 is handled. Duration 228 ms by bot id=7372094405
+2024-11-22 14:50:29,432 - aiogram.event - INFO - Update id=818164556 is not handled. Duration 5 ms by bot id=7372094405
+2024-11-22 14:50:36,113 - aiogram.event - INFO - Update id=818164557 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:50:43,563 - aiogram.event - INFO - Update id=818164558 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:50:48,105 - aiogram.event - INFO - Update id=818164559 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:50:51,424 - aiogram.event - INFO - Update id=818164560 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:50:55,280 - aiogram.event - INFO - Update id=818164561 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:50:57,706 - aiogram.event - INFO - Update id=818164562 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 14:51:01,285 - aiogram.event - INFO - Update id=818164563 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:51:03,465 - aiogram.event - INFO - Update id=818164564 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:51:08,179 - aiogram.event - INFO - Update id=818164565 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:51:11,458 - aiogram.event - INFO - Update id=818164566 is not handled. Duration 3 ms by bot id=7372094405
+2024-11-22 14:51:16,059 - aiogram.event - INFO - Update id=818164567 is not handled. Duration 2 ms by bot id=7372094405
+2024-11-22 14:51:28,592 - aiogram.event - INFO - Update id=818164568 is handled. Duration 549 ms by bot id=7372094405
+2024-11-22 14:51:30,964 - aiogram.event - INFO - Update id=818164569 is handled. Duration 259 ms by bot id=7372094405
+2024-11-22 14:51:35,007 - aiogram.event - INFO - Update id=818164570 is not handled. Duration 3 ms by bot id=7372094405
+2024-11-22 14:51:35,008 - aiogram.event - ERROR - Cause exception while process update id=818164570 by bot id=7372094405
+InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/marfys9/Downloads/China_Bot/delivery-calculation-bot.py", line 252, in process_length
+    length = Decimal(message.text)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+2024-11-22 14:51:42,654 - aiogram.event - INFO - Update id=818164571 is handled. Duration 214 ms by bot id=7372094405
+2024-11-22 14:51:44,329 - aiogram.event - INFO - Update id=818164572 is handled. Duration 193 ms by bot id=7372094405
+2024-11-22 14:51:46,934 - aiogram.event - INFO - Update id=818164573 is handled. Duration 241 ms by bot id=7372094405
+2024-11-22 14:51:51,921 - aiogram.event - INFO - Update id=818164574 is handled. Duration 225 ms by bot id=7372094405
+2024-11-22 14:51:55,372 - aiogram.event - INFO - Update id=818164575 is handled. Duration 196 ms by bot id=7372094405
+2024-11-22 14:51:59,679 - aiogram.event - INFO - Update id=818164576 is handled. Duration 199 ms by bot id=7372094405
+2024-11-22 14:52:04,017 - aiogram.event - INFO - Update id=818164577 is handled. Duration 230 ms by bot id=7372094405
+2024-11-22 14:52:06,957 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 14:52:07,230 - aiogram.event - INFO - Update id=818164578 is handled. Duration 475 ms by bot id=7372094405
+2024-11-22 14:52:11,438 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 14:52:11,670 - aiogram.event - INFO - Update id=818164579 is handled. Duration 416 ms by bot id=7372094405
+2024-11-22 15:04:44,285 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 15:04:45,075 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 15:04:50,734 - aiogram.event - INFO - Update id=818164580 is handled. Duration 614 ms by bot id=7372094405
+2024-11-22 15:04:53,253 - aiogram.event - INFO - Update id=818164581 is handled. Duration 279 ms by bot id=7372094405
+2024-11-22 15:04:54,664 - aiogram.event - INFO - Update id=818164582 is not handled. Duration 3 ms by bot id=7372094405
+2024-11-22 15:05:14,155 - aiogram.event - INFO - Update id=818164583 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:18,475 - aiogram.event - INFO - Update id=818164584 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:26,199 - aiogram.event - INFO - Update id=818164585 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:28,980 - aiogram.event - INFO - Update id=818164586 is not handled. Duration 5 ms by bot id=7372094405
+2024-11-22 15:05:37,969 - aiogram.event - INFO - Update id=818164587 is not handled. Duration 5 ms by bot id=7372094405
+2024-11-22 15:05:40,439 - aiogram.event - INFO - Update id=818164588 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:44,972 - aiogram.event - INFO - Update id=818164589 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:51,529 - aiogram.event - INFO - Update id=818164590 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:05:59,056 - aiogram.event - INFO - Update id=818164591 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:06:07,300 - aiogram.event - INFO - Update id=818164592 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:06:15,488 - aiogram.event - INFO - Update id=818164593 is handled. Duration 766 ms by bot id=7372094405
+2024-11-22 15:06:17,316 - aiogram.event - INFO - Update id=818164594 is handled. Duration 250 ms by bot id=7372094405
+2024-11-22 15:06:22,362 - aiogram.event - INFO - Update id=818164595 is handled. Duration 302 ms by bot id=7372094405
+2024-11-22 15:06:33,378 - aiogram.event - INFO - Update id=818164596 is handled. Duration 292 ms by bot id=7372094405
+2024-11-22 15:06:41,894 - aiogram.event - INFO - Update id=818164597 is handled. Duration 289 ms by bot id=7372094405
+2024-11-22 15:06:54,309 - aiogram.event - INFO - Update id=818164598 is handled. Duration 239 ms by bot id=7372094405
+2024-11-22 15:07:00,958 - aiogram.event - INFO - Update id=818164599 is handled. Duration 320 ms by bot id=7372094405
+2024-11-22 15:07:05,935 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:07:06,208 - aiogram.event - INFO - Update id=818164600 is handled. Duration 495 ms by bot id=7372094405
+2024-11-22 15:07:21,577 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:07:22,136 - aiogram.event - INFO - Update id=818164601 is handled. Duration 752 ms by bot id=7372094405
+2024-11-22 15:09:23,053 - aiogram.event - INFO - Update id=818164602 is handled. Duration 693 ms by bot id=7372094405
+2024-11-22 15:09:41,347 - aiogram.event - INFO - Update id=818164603 is not handled. Duration 4 ms by bot id=7372094405
+2024-11-22 15:22:22,992 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 15:22:23,677 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 15:22:41,304 - aiogram.event - INFO - Update id=818164604 is handled. Duration 717 ms by bot id=7372094405
+2024-11-22 15:22:45,453 - aiogram.event - INFO - Update id=818164605 is handled. Duration 408 ms by bot id=7372094405
+2024-11-22 15:23:04,781 - aiogram.event - INFO - Update id=818164606 is handled. Duration 745 ms by bot id=7372094405
+2024-11-22 15:23:09,455 - aiogram.event - INFO - Update id=818164607 is handled. Duration 297 ms by bot id=7372094405
+2024-11-22 15:23:17,933 - aiogram.event - INFO - Update id=818164608 is handled. Duration 306 ms by bot id=7372094405
+2024-11-22 15:23:27,377 - aiogram.event - INFO - Update id=818164609 is handled. Duration 303 ms by bot id=7372094405
+2024-11-22 15:23:33,015 - aiogram.event - INFO - Update id=818164610 is handled. Duration 573 ms by bot id=7372094405
+2024-11-22 15:23:44,442 - aiogram.event - INFO - Update id=818164611 is handled. Duration 265 ms by bot id=7372094405
+2024-11-22 15:23:50,687 - aiogram.event - INFO - Update id=818164612 is handled. Duration 299 ms by bot id=7372094405
+2024-11-22 15:23:58,724 - aiogram.event - INFO - Update id=818164613 is handled. Duration 387 ms by bot id=7372094405
+2024-11-22 15:24:07,014 - aiogram.event - INFO - Update id=818164614 is handled. Duration 229 ms by bot id=7372094405
+2024-11-22 15:24:13,639 - aiogram.event - INFO - Update id=818164615 is handled. Duration 247 ms by bot id=7372094405
+2024-11-22 15:24:22,448 - aiogram.event - INFO - Update id=818164616 is handled. Duration 281 ms by bot id=7372094405
+2024-11-22 15:24:27,898 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:24:28,265 - aiogram.event - INFO - Update id=818164617 is handled. Duration 569 ms by bot id=7372094405
+2024-11-22 15:24:36,450 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:24:36,737 - aiogram.event - INFO - Update id=818164618 is handled. Duration 502 ms by bot id=7372094405
+2024-11-22 15:26:11,384 - aiogram.event - INFO - Update id=818164619 is handled. Duration 614 ms by bot id=7372094405
+2024-11-22 15:26:21,517 - aiogram.event - INFO - Update id=818164620 is handled. Duration 248 ms by bot id=7372094405
+2024-11-22 15:31:53,272 - aiogram.event - INFO - Update id=818164621 is handled. Duration 704 ms by bot id=7372094405
+2024-11-22 15:34:37,478 - aiogram.dispatcher - INFO - Start polling
+2024-11-22 15:34:38,185 - aiogram.dispatcher - INFO - Run polling for bot @ChinaCalcbot_bot id=7372094405 - 'ChinaCalc'
+2024-11-22 15:35:00,369 - aiogram.event - INFO - Update id=818164622 is handled. Duration 581 ms by bot id=7372094405
+2024-11-22 15:35:05,304 - aiogram.event - INFO - Update id=818164623 is handled. Duration 473 ms by bot id=7372094405
+2024-11-22 15:35:27,639 - aiogram.event - INFO - Update id=818164624 is handled. Duration 818 ms by bot id=7372094405
+2024-11-22 15:35:33,094 - aiogram.event - INFO - Update id=818164625 is handled. Duration 332 ms by bot id=7372094405
+2024-11-22 15:35:41,732 - aiogram.event - INFO - Update id=818164626 is handled. Duration 267 ms by bot id=7372094405
+2024-11-22 15:35:48,001 - aiogram.event - INFO - Update id=818164627 is handled. Duration 249 ms by bot id=7372094405
+2024-11-22 15:35:51,452 - aiogram.event - INFO - Update id=818164628 is handled. Duration 569 ms by bot id=7372094405
+2024-11-22 15:36:05,076 - aiogram.event - INFO - Update id=818164629 is handled. Duration 264 ms by bot id=7372094405
+2024-11-22 15:36:11,770 - aiogram.event - INFO - Update id=818164630 is handled. Duration 277 ms by bot id=7372094405
+2024-11-22 15:36:17,495 - aiogram.event - INFO - Update id=818164631 is handled. Duration 245 ms by bot id=7372094405
+2024-11-22 15:36:26,258 - aiogram.event - INFO - Update id=818164632 is handled. Duration 248 ms by bot id=7372094405
+2024-11-22 15:36:40,033 - aiogram.event - INFO - Update id=818164633 is handled. Duration 228 ms by bot id=7372094405
+2024-11-22 15:36:51,295 - aiogram.event - INFO - Update id=818164634 is handled. Duration 364 ms by bot id=7372094405
+2024-11-22 15:37:03,197 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:37:03,476 - aiogram.event - INFO - Update id=818164635 is handled. Duration 485 ms by bot id=7372094405
+2024-11-22 15:37:17,633 - __main__ - ERROR - Ошибка при получении курса евро: Cannot connect to host www.google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1020)')]
+2024-11-22 15:37:17,894 - aiogram.event - INFO - Update id=818164636 is handled. Duration 481 ms by bot id=7372094405
